@@ -1,0 +1,10 @@
+.container {
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.title {
+  color: #9c9a2d;
+  margin: 0;
+}
