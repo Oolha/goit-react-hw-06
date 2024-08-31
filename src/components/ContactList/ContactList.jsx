@@ -1,7 +1,10 @@
+import { useSelector } from "react-redux";
 import Contact from "../Contact/Contact";
 import css from "./ContactList.module.css";
+import { selectContacts } from "../../redux/contactsSlice";
 
-const ContactList = ({ contacts, onDeleteContact }) => {
+const ContactList = () => {
+  const contacts = useSelector(selectContacts);
   return (
     <ul className={css.list}>
       {contacts.map((contact) => {
@@ -11,7 +14,6 @@ const ContactList = ({ contacts, onDeleteContact }) => {
               id={contact.id}
               name={contact.name}
               number={contact.number}
-              onDelete={onDeleteContact}
             />
           </li>
         );
